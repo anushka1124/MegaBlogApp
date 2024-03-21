@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import './App.css'
-import {Header, Footer} from './components/index'
 import { useDispatch } from 'react-redux'
+import './App.css'
 import authService from './appwrite/Auth_Service'
 import {login, logout} from './stores/AuthSlice'
+import {Header, Footer} from './components/index'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
     <div className='w-full block'>
       <Header/>
       <main>
-        Todo:{/* <Outlet/> */}
+        Todo:<Outlet/>
       </main>
       <Footer/>
     </div>
